@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+    <head th:replace="~{layout/template :: head}">
+        <title>Inicio</title>
+    </head>
+    <body>
+        
+        <!-- Me traigo el template -->
+        <header th:replace="~{layout/template :: header}"></header>
+    
+        <!--Sections-->
+        <section th:replace="~{layout/btnAgregar :: btnAgregar}"></section>
+        
+        <section th:replace="~{layout/mostrarClientes :: mostrarClientes}"></section>
+        
+        <section th:replace="~{layout/agregarClientes :: agregarClientes}"></section>
+
+        <!-- Footer Template -->
+        <footer th:replace="~{layout/template :: footer}"></footer>
+            
+        
+        <!--scripts-->
+        <div th:replace="~{layout/template :: scripts}"></div>
+    </body>
+</html>

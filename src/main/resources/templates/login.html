@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" 
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+    <head th:replace="~{layout/template :: head}">
+        <title>Login</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        
+        <header th:replace="~{layout/template :: header}"></header>
+        
+        <section id="actions" class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <!--para agregar botones si es necesario-->
+                </div>
+            </div>  
+        </section>
+        
+        <section id="login">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="card align-items-center">
+                            <div class="card-header w-100 text-center">
+                                <h4>LOGIN</h4>
+                            </div>
+                            <div class="card-body">
+                                <form method="POST" th:action="@{/login}">
+                                    <div class="form-group">
+                                        <label class="form-label">Username:
+                                            <input 
+                                                type="text"
+                                                name="username"
+                                                id="username"
+                                                class="form-control"
+                                            />
+                                        </label>               
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="form-label">Password:
+                                            <input 
+                                                type="password"
+                                                name="password"
+                                                id="password"
+                                                class="form-control"
+                                            />
+                                        </label>                                      
+                                    </div>
+                                    <div class="d-grid">
+                                        <input class="btn btn-outline-primary d-md-block my-4" type="submit" value="Login" />                 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>         
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <footer th:replace="~{layout/template :: footer}"></footer>
+        
+        <!-- Incluye los scripts desde la plantilla principal -->
+        <div th:replace="~{layout/template :: scripts}"></div>
+    </body>
+</html>

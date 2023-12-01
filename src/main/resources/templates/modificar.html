@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+>
+    
+    <head th:replace="~{layout/template :: head}">
+        <title>Datos de Persona</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <header th:replace="~{layout/template :: header}"></header>
+        
+        <section th:replace="~{layout/editarCliente :: editarCliente}"></section>
+        
+        <footer th:replace="layout/template :: footer"></footer>
+        
+        
+        
+        
+<!--     <h2>Datos de Persona</h2>
+        
+        <a th:href="@{/}">Regresar</a>
+        
+        <br />
+
+        <form th:action="@{/guardar}" method="post" th:object="${persona}">
+             idpersona hidden 
+            <input 
+                type="hidden"
+                name="idpersona"
+                th:field="*{idpersona}"
+            />
+            
+            <label>Nombre:
+                <input
+                    type="text"
+                    name="nombre"
+                    th:field="*{nombre}"
+                />
+            </label>
+            <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+
+            
+            <br />
+            
+            <label>Apellido:
+                <input 
+                    type="text"
+                    name="apellido"
+                    th:field="*{apellido}"
+                />
+            </label>
+            <span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}">
+                Muestra Error del Apellido
+            </span>
+
+            
+            <br />
+            
+            <label>Mail:
+                <input 
+                    type="email"
+                    name="email"
+                    th:field="*{email}"
+                />
+            </label>
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+                Muestra Error del Email
+            </span>
+            
+            <br />
+            
+            <label>Telefono:
+                <input 
+                    type="text"
+                    name="telefono"
+                    th:field="*{telefono}"
+                />
+            </label>
+            <br/>
+            
+            <label>Saldo:
+                <input 
+                    type="text"
+                    name="saldo"
+                    th:field="*{saldo}"
+                />
+            </label>
+            <span th:if="${#fields.hasErrors('saldo')}" th:errors="*{saldo}">
+                Muestra Error del Saldo
+            </span>
+            
+            <br />
+            
+            <button 
+                type="submit" 
+                name="guardar"
+                value="Guardar" 
+            >
+                Guardar
+            </button>
+        </form>-->
+        
+   
+        
+        <div th:replace="~{layout/template :: scripts}"></div>
+    </body>
+</html>
