@@ -11,7 +11,22 @@
     </head>
     
     <body>
-        
+        <section th:fragment="editarCliente">
+            <form 
+                method="POST" 
+                th:action="@{/guardar}" 
+                th:object="${persona}"
+                class="was-validated"
+            >
+                <!-- id oculto para que matchee con el item que quiero modificar -->
+                <input 
+                    type="hidden"
+                    name="idpersona"
+                    th:field="*{idpersona}"
+                />
+                <section th:replace="~{layout/btnEditar :: btnEditar}"></section>
+            </form>  
+        </section>
         
         
         <div th:replace="~{layout/template :: scripts}"></div>
