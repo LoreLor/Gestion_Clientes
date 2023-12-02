@@ -5,12 +5,49 @@
     xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
 >
     <head>
-        <title>TODO supply a title</title>
+        <title>Btns de Acciones</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <section th:fragment="btnEditar">
+            <div id="actions" class="py-4 mb-4 bg-light">
+                <div class="container">
+                    <div class="row">
+                        
+                        <!--btn regresar-->
+                        <div class="col-md-3">
+                            <a 
+                                th:href="@{/}" 
+                                class="btn btn-light btn-block"
+                            >
+                                <i class="fas fa-arrow-left">[[#{accion.regresar}]]</i>
+                            </a>
+                        </div>
+                        
+                        <!--btn modificar-->
+                        <div class="col-md-3">
+                            <button 
+                                type="submit" 
+                                class="btn btn-block btn-light"
+                            >
+                                <i class="fas fa-check">[[#{accion.modificar}]]</i>
+                            </button>
+                        </div>
+                        
+                        <!--btn eliminar-->
+                        <div class="col-md-3">
+                            <a 
+                                th:href="@{/eliminar(idpersona=${idpersona.idpersona})}"
+                                class="btn btn-block btn-light"
+                            >
+                                <i class="fas fa-trash">[[#{accion.eliminar}]]</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <div th:replace="~{layout/template :: scripts}"></div>
     </body>
