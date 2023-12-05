@@ -33,7 +33,7 @@ public class SecurityConfig {
                 .requestMatchers("/").fullyAuthenticated()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/editar/**", "/agregar/**", "/eliminar", "/guardar").authenticated()
+                .requestMatchers("/editar/**", "/agregar/**", "/eliminar", "/guardar/**").authenticated()
                 .and()
                 .authorizeHttpRequests()
                 .requestMatchers("/webjars/**", "/css/**", "/js/**").permitAll()
