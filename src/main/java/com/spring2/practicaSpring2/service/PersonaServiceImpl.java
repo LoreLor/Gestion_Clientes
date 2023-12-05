@@ -36,10 +36,5 @@ public class PersonaServiceImpl implements PersonaService {
     @Transactional(readOnly=true)
     public Persona encontrarPersona(Persona persona) {
        return personaDao.findById(persona.getIdpersona()).orElse(null);
-    }
-
-    public List<Persona> listarPersona() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
+    }   
 }
