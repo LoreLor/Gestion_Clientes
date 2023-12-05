@@ -14,34 +14,36 @@
             <div id="actions" class="py-4 mb-4 bg-light">
                 <div class="container">
                     <div class="row">
-                        
                         <!--btn regresar-->
-                        <div class="col-md-3">
+                        <div class="col">
                             <a 
                                 th:href="@{/}" 
-                                class="btn btn-light btn-block"
+                                class="btn btn-info btn-block"
                             >
-                                <i class="fas fa-arrow-left">[[#{accion.regresar}]]</i>
+                                <i class="fas fa-arrow-left"></i>
+                                   [[#{accion.regresar}]]
                             </a>
                         </div>
                         
                         <!--btn modificar-->
-                        <div class="col-md-3">
+                        <div class="col">
                             <button 
                                 type="submit" 
-                                class="btn btn-block btn-light"
+                                class="btn btn-block btn-secondary"
                             >
-                                <i class="fas fa-check">[[#{accion.modificar}]]</i>
+                                <i class="fas fa-check"></i>
+                                  [[#{accion.guardar}]]
                             </button>
                         </div>
                         
                         <!--btn eliminar-->
-                        <div class="col-md-3">
+                        <div class="col">
                             <a 
                                 th:href="@{/eliminar(idpersona=${persona.idpersona})}"
-                                class="btn btn-block btn-light"
+                                class="btn btn-block btn-danger"
                             >
-                                <i class="fas fa-trash">[[#{accion.eliminar}]]</i>
+                                <i class="fas fa-trash"></i>
+                                  [[#{accion.eliminar}]]
                             </a>
                         </div>
                     </div>
