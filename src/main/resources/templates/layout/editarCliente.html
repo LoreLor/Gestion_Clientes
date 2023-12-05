@@ -56,7 +56,7 @@
                                     <div class="form-group mb-3">
                                         <label for="nombre">[[#{persona.email}]]</label>
                                         <input
-                                            type="text"
+                                            type="email"
                                             name="email"
                                             class="form-control"
                                             required="true"
@@ -80,6 +80,7 @@
                                             name="saldo"
                                             class="form-control"
                                             required="true"
+                                            step="any"
                                             th:field="*{saldo}"
                                         />  
                                     </div>
