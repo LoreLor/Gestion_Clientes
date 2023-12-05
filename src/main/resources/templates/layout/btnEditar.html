@@ -11,11 +11,11 @@
     </head>
     <body>
         <section th:fragment="btnEditar">
-            <div id="actions" class="py-4 mb-4 bg-light">
+            <div id="actions" class="py-4 mb-4 bg-light mx-auto">
                 <div class="container">
-                    <div class="row">
+                    <div class="row justify-content-center align-items-center g-2">
                         <!--btn regresar-->
-                        <div class="col">
+                        <div class="col-md-3 text-center">
                             <a 
                                 th:href="@{/}" 
                                 class="btn btn-info btn-block"
@@ -26,7 +26,7 @@
                         </div>
                         
                         <!--btn modificar-->
-                        <div class="col">
+                        <div class="col-md-3 text-center">
                             <button 
                                 type="submit" 
                                 class="btn btn-block btn-secondary"
@@ -37,7 +37,7 @@
                         </div>
                         
                         <!--btn eliminar-->
-                        <div class="col">
+                        <div class="col-md-3 text-center">
                             <a 
                                 th:href="@{/eliminar(idpersona=${persona.idpersona})}"
                                 class="btn btn-block btn-danger"
